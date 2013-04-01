@@ -13,6 +13,32 @@ alias h="history"
 alias j="jobs"
 alias v="vim"
 
+# HTTP servers
+if grep -q "Ubuntu" /etc/issue; then
+	alias ngstart='sudo service nginx start'
+	alias ngrestart='sudo service nginx restart'
+	alias ngreload='sudo service nginx reload'
+	alias ngstop='sudo service nginx stop'
+	alias ngtest='sudo service nginx configtest'
+
+	alias apstart='sudo service apache2 start'
+	alias aprestart='sudo service apache2 restart'
+	alias apreload='sudo service apache2 reload'
+	alias apstop='sudo service apache2 stop'
+	alias aptest='sudo service apache2 configtest'
+fi
+if grep -q "CentOS" /etc/issue; then
+	alias ngrestart='sudo /etc/init.d/nginx restart'
+	alias ngreload='sudo /etc/init.d/nginx reload'
+	alias ngtest='sudo /etc/init.d/nginx configtest'
+	alias ngstatus='sudo /etc/init.d/nginx status'
+
+	alias aprestart='sudo /etc/init.d/httpd restart'
+	alias apreload='sudo /etc/init.d/httpd reload'
+	alias aptest='/etc/init.d/httpd configtest'
+	alias apstatus='/etc/init.d/httpd status'
+fi
+
 alias ll="ls -lh"
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
