@@ -14,4 +14,13 @@ else
 	fi
 fi
 unset doIt
+
+
+if [ ! -d "~/code/z" ]; then
+	# https://github.com/rupa/z
+	mkdir -p ~/code/z
+	curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
+	chmod +x ~/code/z/z.sh
+fi
+
 source ~/.bash_profile
