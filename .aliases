@@ -12,6 +12,7 @@ alias gst="git status"
 alias h="history"
 alias j="jobs"
 alias v="vim"
+alias gr="grep ./ -r -n --color -e"
 
 alias coffeec='find . -name "*.coffee" | xargs coffee -w -c'
 
