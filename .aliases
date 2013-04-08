@@ -9,6 +9,7 @@ alias -- -="cd -"
 # Shortcuts
 alias g="git"
 alias gst="git status"
+alias gmt="git commit -m "
 alias h="history"
 alias j="jobs"
 alias v="vim"
