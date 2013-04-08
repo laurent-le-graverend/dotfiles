@@ -13,6 +13,8 @@ alias h="history"
 alias j="jobs"
 alias v="vim"
 
+alias coffeec='find . -name "*.coffee" | xargs coffee -w -c'
+
 # HTTP servers
 if grep -q "Ubuntu" /etc/issue; then
 	alias ngstart='sudo service nginx start'
