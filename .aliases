@@ -31,6 +31,19 @@ if grep -q "Ubuntu" /etc/issue; then
 	alias apstop='sudo service apache2 stop'
 	alias aptest='sudo service apache2 configtest'
 fi
+if grep -q "Debian" /etc/issue; then
+	alias ngstart='sudo service nginx start'
+	alias ngrestart='sudo service nginx restart'
+	alias ngreload='sudo service nginx reload'
+	alias ngstop='sudo service nginx stop'
+	alias ngtest='sudo service nginx configtest'
+
+	alias apstart='sudo service apache2 start'
+	alias aprestart='sudo service apache2 restart'
+	alias apreload='sudo service apache2 reload'
+	alias apstop='sudo service apache2 stop'
+	alias aptest='sudo service apache2 configtest'
+fi
 if grep -q "CentOS" /etc/issue; then
 	alias ngrestart='sudo /etc/init.d/nginx restart'
 	alias ngreload='sudo /etc/init.d/nginx reload'
