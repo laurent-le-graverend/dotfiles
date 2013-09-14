@@ -28,7 +28,7 @@ endif
 
 " Respect modeline in files
 set modeline
-set modelines=4
+set modelines=2
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
@@ -38,8 +38,13 @@ set number
 syntax on
 " Highlight current line
 set cursorline
+" Smart indent + toggle it with F12"
+set smartindent
+set pastetoggle=<F12>
 " Make tabs as wide as two spaces
 set tabstop=2
+set shiftwidth=2
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
